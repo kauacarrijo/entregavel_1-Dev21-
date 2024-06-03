@@ -25,6 +25,7 @@ function Calculadora(num1, num2, ope) {
   if(resultado === undefined || resultado > 1000000){
     resultado = "ERRO";
   }
+  
   return resultado;
 }
 
