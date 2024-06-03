@@ -1,10 +1,33 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function Calculadora(num1, num2, ope) {
+  num1 = Number(num1);
+  num2 = Number(num2);
+  let resultado;
+  switch(ope){
+    case "+":
+      resultado = num1 + num2;
+      break;
+    case "-":
+      resultado = num1 - num2;
+      break;
+    case "*":
+      resultado = num1 * num2;
+      break;
+    case "/":
+      resultado = num1 / num2;
+      break;
+    case "e":
+      resultado = 1;
+      for(let i = 0; i < num2; i++){
+        resultado *= num1;
+      }
+      break;
+  }
+  if(resultado === undefined || resultado > 1000000){
+    resultado = "ERRO";
+  }
+  return resultado;
+}
 
-//ESCREVA SEU CÓDIGO AQUI!!
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let visor = document.getElementById("visor");
